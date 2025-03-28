@@ -1,30 +1,42 @@
 <ion-header [translucent]="true">
+  <!-- The header section of the page -->
   <ion-toolbar>
     <ion-title>
-     movie app
+      <!-- Title of the app -->
+      movie app
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- The content section of the page, it takes up the full screen -->
 
-  <ion-card *ngFor="let x of myMovies" style="text-align: center;"> 
-    <img src={{x.Poster}}>
+  <!-- Loop through the 'myMovies' array to display each movie's data -->
+  <ion-card *ngFor="let x of myMovies" style="text-align: center;">
+    <!-- Display the movie poster image -->
+    <img src={{x.Poster}} alt="Movie Poster">
+
     <ion-card-header>
-      <ion-card-title>]{{x.Title}}</ion-card-title>
-      <ion-card-subtitle>{{x.Year}}</ion-card-subtitle>
+      <!-- Display the movie title and year -->
+      <ion-card-title>
+        {{x.Title}} <!-- Movie title -->
+      </ion-card-title>
+      <ion-card-subtitle>
+        {{x.Year}} <!-- Movie year -->
+      </ion-card-subtitle>
     </ion-card-header>
   
-   <ion-card-content>
-   
-   </ion-card-content>
+    <ion-card-content>
+      <!-- Additional movie content can go here (currently empty) -->
+    </ion-card-content>
   </ion-card>
 
-
-<!--<ul>
-  <li *ngFor="let x of myMovies">
-   {{x.Title}}, {{x.Year}}
-  <img src={{x.Poster}}>
-  </li>
-</ul>-->
+  <!-- The commented-out section below was a simple list implementation for displaying movie titles and years -->
+  <!--<ul>
+    <li *ngFor="let x of myMovies">
+      {{x.Title}}, {{x.Year}}
+      <img src={{x.Poster}} alt="Movie Poster">
+    </li>
+  </ul>-->
 </ion-content>
+
